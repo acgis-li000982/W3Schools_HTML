@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple WebGIS Map</title>
+
+  <!-- CSS (styling) -->
+  <style>
+    #map {
+      height: 500px;   /* This makes the map visible */
+      width: 100%;
+    }
+  </style>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+
+  <!-- HTML (structure) -->
+  <h2>My First WebGIS Map</h2>
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- JavaScript (logic) -->
+  <script>
+    // Create the map
+    var map = L.map('map').setView([45.3496, -75.7714], 12); // Ottawa
+
+    // Add a basemap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
+
+    // Add a marker
+    L.marker([45.3496, -75.7714]).addTo(map)
+      .bindPopup("Hello from Ottawa, Canada!")
+      .openPopup();
+  </script>
+
+</body>
+</html>
