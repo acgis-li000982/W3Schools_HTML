@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Country Profile</h1>
+<p>CIA Factbook about this country</p>
+
+<script>
+const countries = {
+  A: {
+    pic: "files/flags/Australia.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/australia/"
+  },
+  B: {
+    pic: "files/flags/Belgium.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/belgium/"
+  },
+  C: {
+    pic: "files/flags/Canada.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/canada/"
+  },
+  D: {
+    pic: "files/flags/Denmark.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/denmark/"
+  },
+  E: {
+    pic: "files/flags/Egypt.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/egypt/"
+  },
+  F: {
+    pic: "files/flags/France.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/france/"
+  },
+  G: {
+    pic: "files/flags/Germany.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/germany/"
+  },
+  H: {
+    pic: "files/flags/Hungary.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/hungary/"
+  },
+  I: {
+    pic: "files/flags/Italy.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/italy/"
+  },
+  J: {
+    pic: "files/flags/Japan.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/japan/"
+  },
+  K: {
+    pic: "files/flags/Kenya.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/kenya/"
+  },
+  L: {
+    pic: "files/flags/Luxembourg.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/luxembourg/"
+  },
+  M: {
+    pic: "files/flags/Mexico.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/mexico/"
+  },
+  N: {
+    pic: "files/flags/New_Zealand.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/new-zealand/"
+  },
+  O: {
+    pic: "files/flags/Oman.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/oman/"
+  },
+  P: {
+    pic: "files/flags/Portugal.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/portugal/"
+  },
+  Q: {
+    pic: "files/flags/Qatar.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/qatar/"
+  },
+  R: {
+    pic: "files/flags/Romania.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/romania/"
+  },
+  S: {
+    pic: "files/flags/South_Africa.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/south-africa/"
+  },
+  T: {
+    pic: "files/flags/Turkey.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/turkey-turkiye/"
+  },
+  U: {
+    pic: "files/flags/United_Kingdom.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/united-kingdom/"
+  },
+  V: {
+    pic: "files/flags/Vatican_City.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/holy-see-vatican-city/"
+  },
+  Y: {
+    pic: "files/flags/Yemen.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/yemen/"
+  },
+  Z: {
+    pic: "files/flags/Zimbabwe.png",
+    link: "https://www.cia.gov/the-world-factbook/countries/zimbabwe/"
+  }
+};
+</script>
+
+<script>
+function country(letter) 
+{ 
+  const info = countries[letter]; // look up the letter 
+  document.getElementById('flag').src = info.pic; 
+  document.getElementById('intro').innerHTML = `<a href="${info.link}" target="_blank">${info.link}</a>`;
+} 
+</script>
+
+<button onclick="country('A')">Australia</button>
+<button onclick="country('B')">Belgium</button>
+<button onclick="country('C')">Canada</button>
+<button onclick="country('D')">Denmark</button>
+<button onclick="country('E')">Egypt</button>
+<button onclick="country('F')">France</button>
+<button onclick="country('G')">Germany</button>
+<button onclick="country('H')">Hungary</button>
+<button onclick="country('I')">Italy</button>
+<button onclick="country('J')">Japan</button>
+<button onclick="country('K')">Kenya</button>
+<button onclick="country('L')">Luxembourg</button>
+<br>
+<button onclick="country('M')">Mexico</button>
+<button onclick="country('N')">New Zealand</button>
+<button onclick="country('O')">Oman</button>
+<button onclick="country('P')">Portugal</button>
+<button onclick="country('Q')">Qatar</button>
+<button onclick="country('R')">Romania</button>
+<button onclick="country('S')">South Africa</button>
+<button onclick="country('T')">Turkey</button>
+<button onclick="country('U')">United Kingdom</button>
+<button onclick="country('V')">Vetican City</button>
+<button onclick="country('Y')">Yeman</button>
+<button onclick="country('Z')">Zimbabwe</button>
+
+<br>
+<br>
+<img id="flag" width="20%" height="20%">
+<p id="intro"></p>
+
+</body>
+</html> 
