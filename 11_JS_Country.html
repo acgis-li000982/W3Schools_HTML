@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Country Profile</h1>
+<p>CIA Factbook about this country</p>
+
+<script>
+function country(letter)
+{
+  var pic;
+  var link;
+  if (letter == "A") {
+    pic = "files/flags/Australia.png";
+    link = "https://www.cia.gov/the-world-factbook/countries/australia/";
+  } else if (letter == "B") {
+    pic = "files/flags/Belgium.png";
+    link = "https://www.cia.gov/the-world-factbook/countries/belgium/";
+  } else {
+    pic = "files/flags/Canada.png";
+    link = "https://www.cia.gov/the-world-factbook/countries/canada/";
+  }
+  document.getElementById('flag').src = pic;
+  document.getElementById('intro').innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
+}
+</script>
+
+<button onclick="country('A')">Australia</button>
+<button onclick="country('B')">Belgium</button>
+<button onclick="country('C')">Canada</button>
+<br>
+<br>
+<img id="flag" width="20%" height="20%">
+<p id="intro"></p>
+
+</body>
+</html> 
+
